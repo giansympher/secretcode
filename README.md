@@ -32,3 +32,29 @@ You can check out [the Next.js GitHub repository](https://github.com/vercel/next
 The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+
+# reference : https://www.youtube.com/watch?v=sH93pQb9bWM
+
+# Next.JS Style Guide: Google Edition
+
+## This project is a guide for creating new Next.JS projects using Google's TypeScript Style guidelines.
+
+<br>
+
+### Technologies we are using:
+
+- ESLint ([`.eslintrc.js`](./.eslintrc.js))
+- Prettier ([`.prettierrc`](./.prettierrc))
+- Typescript ([`tsconfig.json`](./tsconfig.json))
+- `eslint-config-prettier` (helps eslint and prettier get along)
+
+### Auto-formatting on save:
+
+Inside `/.vscode/settings.json` we set prettier as the default formatter, and also set `editor.codeActionsOnSave` to run:
+
+- **Lint:** `"source.fixAll.eslint"`
+- **Format:** `"source.fixAll.format"`
+
+### Checking standards pre-commit:
+
+Using [husky](https://www.npmjs.com/package/husky) we can check all of our style standards to make sure our git commits are up to par. Check those checks out at [`.husky/pre-commit`](.husky/pre-commit)
